@@ -1,0 +1,100 @@
+@import "src/styles";
+
+.firstpage{
+  width: 100vw;
+  height: 100vh;
+  background-color: $bg-primary;
+}
+
+.inner-square{
+  display: grid;
+  grid-template-areas:
+    "row1 none"
+    "row2 none"
+    "row3 scroll";
+  grid-template-columns: 60vw auto;
+  grid-template-rows: 2.5fr 2fr 1.5fr;
+  background: $bg-dark;
+  border: 2.6em solid $bg-secondary;
+  color: $bg-secondary;
+  font-family: 'Finger Paint', cursive;
+  height: 100vh;
+  min-width: 280px;
+  padding: 6em 3.8em 3em 3.8em;
+  width: 100vw;
+}
+
+.grid-text{
+  font-family: 'Moul', cursive;
+  text-transform: uppercase;
+}
+
+.grid-area-1{
+  grid-area: row1;
+}
+
+.grid-area-2{
+  grid-area: row2;
+}
+
+.grid-area-3{
+  grid-area: row3;
+}
+
+.grid-area-4{
+  grid-area: scroll;
+  writing-mode: vertical-rl;
+  transition: all .5s ease-in-out;
+  font-size: 11.6px;
+}
+
+.grid-area-4:hover{
+  transform: scale(1.1);
+}
+
+.grid-area-4 *{
+  animation: example 1s ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes example {
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(1em);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .inner-square{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+  }
+
+  .grid-area-4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    writing-mode: horizontal-tb;
+    transition: all .5s ease-in-out;
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .grid-text {
+    font-size: 1em;
+  }
+
+  .grid-area-4{
+    font-size: 10px;
+  }
+
+  }
