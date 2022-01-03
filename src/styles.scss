@@ -2,3 +2,32 @@
 $bg-primary: #582161;
 $bg-secondary: #E2BBE8;
 $bg-dark: #222;
+
+body{
+  //overflow: hidden;
+  font-family: 'Moul', cursive;
+}
+
+.mainpage{
+  width: 100vw;
+  height: 100vh;
+  background-color: $bg-primary;
+}
+
+.inner-square{
+  background: $bg-dark;
+  border: 2.6em solid $bg-secondary;
+  color: $bg-secondary;
+  height: 100vh;
+  min-width: 280px;
+  padding: 6em 3.8em 3em 3.8em;
+  width: 100vw;
+}
+
+.scroll{
+  writing-mode: horizontal-tb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2em;
+}
