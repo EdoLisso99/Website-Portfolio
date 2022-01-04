@@ -1,3 +1,5 @@
+@import "src/styles";
+
 h1, h2{
   text-transform: uppercase;
   border-bottom: 0.2em solid #222;
@@ -51,43 +53,9 @@ p, li{
   padding-bottom: 50px;
 }
 
-.scroll-up *{
-  animation: scroll-up-anim 1s ease-in-out;
-  animation-iteration-count: infinite;
-}
-
-.scroll-down *{
-  animation: scroll-down-anim 1s ease-in-out;
-  animation-iteration-count: infinite;
-}
-
 .arrow{
   display: flex;
   align-self: center;
-}
-
-@keyframes scroll-down-anim {
-  0%{
-    transform: translateY(0);
-  }
-  50%{
-    transform: translateY(1em);
-  }
-  100%{
-    transform: translateY(0);
-  }
-}
-
-@keyframes scroll-up-anim {
-  0%{
-    transform: translateY(0);
-  }
-  50%{
-    transform: translateY(-1em);
-  }
-  100%{
-    transform: translateY(0);
-  }
 }
 
 @media only screen and (min-width: 1800px) {

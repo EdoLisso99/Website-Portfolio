@@ -1,0 +1,118 @@
+@import "src/styles";
+
+.inner-square{
+  display: grid;
+  grid-template-areas:
+    "project scroll";
+  grid-template-columns: 9fr 1fr;
+}
+
+h1{
+  border-bottom: 0.2em solid #222;
+  width: 40%;
+  font-size: 3em;
+}
+
+.scroll{
+  font-size: 1.5em;
+}
+
+.scroll-container{
+  grid-area: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px 0;
+}
+
+.projects{
+  grid-area: project;
+}
+
+h1, h2{
+  text-transform: uppercase;
+}
+
+ul{
+  padding-left: 0;
+}
+
+li, p{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+li{
+  margin-top: 3vh;
+}
+
+li * + *{
+  margin-left: 2vw;
+}
+
+p{
+  margin: 0;
+  font-size: 2em;
+}
+
+.date{
+  opacity: .8;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: lighter;
+  font-size: 1.25em;
+  align-self: center;
+  justify-self: start;
+  margin-left: 10px !important;
+}
+
+@media only screen and (max-width: 1110px){
+  h1{
+    font-size: 2em;
+  }
+  p{
+   font-size: 1em;
+  }
+  .inner-square{
+    padding: 3em 1.9em 1.5em 1.9em;
+  }
+}
+
+@media only screen and (max-width: 930px) {
+  .date{
+    display: none;
+  }
+  img{
+    height: 25px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .inner-square, .scroll-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .scroll-container{
+    justify-content: space-between;
+    height: 100%;
+    font-size: 1em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .inner-square{
+    line-height: 1;
+  }
+  .hide-600, img{
+    display: none;
+  }
+  h1{
+    font-size: 1.5em;
+  }
+  li{
+    font-size: 1.2em;
+  }
+  .scroll-container{
+    font-size: .8em;
+  }
+}

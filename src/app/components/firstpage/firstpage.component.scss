@@ -23,18 +23,18 @@ h1{
 
 .grid-area-4{
   grid-area: scroll;
-  writing-mode: vertical-rl;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-self: flex-end;
   transition: all .5s ease-in-out;
-  font-size: 11.6px;
+  font-size: 1.5em;
   text-shadow: none !important;
 }
 
-.grid-area-4:hover{
-  transform: scale(1.1) translateX(-25px);
-}
-
 .grid-area-4 *{
-  animation: scroll-down 1s ease-in-out;
+  animation: scroll-down-anim 1s ease-in-out;
   animation-iteration-count: infinite;
 }
 
@@ -48,18 +48,6 @@ h1{
   grid-template-rows: 2.5fr 2fr 1.5fr;
 }
 
-@keyframes scroll-down {
-  0%{
-    transform: translateY(0);
-  }
-  50%{
-    transform: translateY(1em);
-  }
-  100%{
-    transform: translateY(0);
-  }
-}
-
 @media only screen and (max-width: 1500px) {
   h1{
     font-size: 3em;
@@ -70,9 +58,12 @@ h1{
   h1{
     font-size: 2em;
   }
+  .grid-area-4{
+    font-size: 1em;
+  }
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 650px){
   .inner-square{
     display: flex;
     flex-direction: column;
@@ -86,8 +77,9 @@ h1{
     flex-direction: column;
     align-items: center;
     writing-mode: horizontal-tb;
-    transition: all .5s ease-in-out;
-    font-size: 10px;
+  }
+  h1{
+    font-size: 1.5em;
   }
 }
 
