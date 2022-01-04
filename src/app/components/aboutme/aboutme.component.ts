@@ -14,7 +14,7 @@ export class AboutmeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  scrollAbout(i: number) {
-    scroll(i);
+  scrollAbout(str: string) {
+    scroll(str);
   }
 }

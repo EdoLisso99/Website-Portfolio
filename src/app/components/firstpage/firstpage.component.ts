@@ -13,8 +13,7 @@ export class FirstpageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
-  scrollAbout(i: number) {
-    scroll(i);
+  scrollFirst(str: string) {
+    scroll(str);
   }
 }

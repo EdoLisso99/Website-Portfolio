@@ -13,7 +13,7 @@ export class EduExpComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  scrollEdEx(i: number) {
-    scroll(i);
+  scrollEdEx(str: string) {
+    scroll(str);
   }
 }

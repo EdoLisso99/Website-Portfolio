@@ -1,5 +1,6 @@
-<div class="mainpage">
+<div class="mainpage" id="projects-component">
   <div class="inner-square">
+    <div class="scroll scroll-up" (click)="scrollProj('ed-ex-component')"><i class="fas fa-caret-up fa-lg arrow"></i>Go Back</div>
     <div class="projects">
       <h1>Projects</h1>
       <ul>
@@ -32,9 +33,6 @@
         </li>
       </ul>
     </div>
-    <div class="scroll-container">
-      <div class="scroll scroll-up" (click)="scrollProj(-1)"><i class="fas fa-caret-up fa-lg arrow"></i>Go Back</div>
-      <div class="scroll scroll-down" (click)="scrollProj(1)">Continue <i class="fas fa-caret-down fa-lg arrow"></i></div>
-    </div>
+      <div class="scroll scroll-down" (click)="scrollProj('contacts-component')">Continue <i class="fas fa-caret-down fa-lg arrow"></i></div>
   </div>
 </div>

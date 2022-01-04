@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {scroll} from "../../../assets/utilities";
 
 @Component({
   selector: 'app-contact',
@@ -12,4 +13,7 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  scrollCont(str: string) {
+    scroll(str);
+  }
 }

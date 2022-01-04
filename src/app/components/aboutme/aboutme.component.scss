@@ -46,6 +46,7 @@ p, li{
 
 .scroll-up{
   padding-top: 50px;
+  height: 30%;
 }
 
 .scroll-down{
@@ -164,6 +165,9 @@ p, li{
 @media only screen and (max-width: 420px) {
   .scroll{
     font-size: .8em;
+  }
+  .scroll-up{
+    height: 10%;
   }
 
   .hide-420{

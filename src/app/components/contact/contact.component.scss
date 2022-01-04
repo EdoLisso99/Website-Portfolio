@@ -1,0 +1,106 @@
+.inner-square{
+  display: grid;
+  grid-template-areas:
+    "contact scroll"
+    "other other";
+  grid-template-columns: 8fr 2fr;
+  padding-top: 3.5em;
+}
+
+.show-500{
+  display: none;
+}
+
+.scroll{
+  grid-area: scroll;
+  height: 30%;
+  padding-top: 50px;
+}
+
+.form-group{
+  width: 75%;
+}
+textarea{
+  resize: none;
+}
+
+.contact{
+  grid-area: contact;
+}
+
+.other{
+  grid-area: other;
+  margin-top: 3vh;
+}
+
+.contact, .other{
+  width: 80%;
+}
+
+.other .icon + .icon{
+  margin-left: 5vw;
+}
+
+form *{
+  margin-top: 5px;
+}
+
+button{
+  margin-top: 15px !important;
+}
+
+@media only screen and (max-width: 600px) {
+  h1, h2{
+    font-size: 1.5em;
+  }
+  .scroll {
+    font-size: 1em;
+  }
+  .contact, .other, .form-group{
+    width: 90%;
+  }
+  .hide-500{
+    display: none;
+  }
+  .show-500{
+    display: flex;
+  }
+  .icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  h1, h2{
+    font-size: 1em;
+  }
+  .scroll {
+    font-size: .9em;
+  }
+  .inner-square{
+    display: grid;
+    grid-template-areas:
+      "scroll"
+      "contact"
+      "other";
+    grid-template-rows: auto 2fr 2fr;
+    row-gap: 3vh;
+  }
+  .contact{
+    margin-top: 0 !important;
+  }
+  .scroll, .scroll-up{
+    height: 30%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  *:not(button){
+    padding: 0;
+    padding-left: 2vw;
+  }
+}

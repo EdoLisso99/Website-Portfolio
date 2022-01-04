@@ -1,3 +1,2 @@
-export function scroll(i: number){
-    window.scrollTo(0, i * document.body.scrollHeight);
-}
+export function scroll(str: string){
+  document.getElementById(str)?.scrollIntoView();}

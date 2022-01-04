@@ -13,7 +13,7 @@ export class ProjectsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  scrollProj(i: number) {
-    scroll(i);
+  scrollProj(str: string) {
+    scroll(str);
   }
 }
