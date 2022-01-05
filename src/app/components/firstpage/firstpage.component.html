@@ -1,10 +1,11 @@
 <div class="mainpage" id="first-component">
   <div class="inner-square">
-    <h1 class="grid-text grid-area-1">Hi, my name is <br> Edoardo Lissoni</h1>
-    <h1 class="grid-text grid-area-2">I’m a junior developer <br> based outside Milan.</h1>
-    <h3 class="grid-text grid-area-3">Want to know more?</h3>
+    <h1 class="grid-text grid-area-1">{{flag ? title_ita : title_eng}} <br> Lissoni Edoardo</h1>
+    <h1 class="grid-text grid-area-2">{{flag ? intro_ita : intro_eng}}</h1>
+    <h3 class="grid-text grid-area-3">{{flag ? want_ita : want_eng}}</h3>
     <p class="grid-text grid-area-4 scroll" (click)="scrollFirst('about-component')">
-      Start <br> scrolling <i class="fas fa-caret-down fa-lg"></i>
+      {{flag ? start_ita : start_eng}} <br> {{flag ? scroll_ita : scroll_eng}} <i class="fas fa-caret-down fa-lg"></i>
     </p>
   </div>
 </div>
+<img alt="Flag" class="flag" src="{{flagLocation}}" (click)="changeFlag()">

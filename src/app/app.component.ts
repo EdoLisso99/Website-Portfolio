@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'website-portfolio';
+  flag:boolean = false;
+
+  changeFlagValue(newValue : boolean){
+    this.flag = newValue;
+  }
+
 }

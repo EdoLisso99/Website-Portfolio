@@ -38,6 +38,7 @@ p, li{
 
 .about-me{
   grid-area: about;
+  width: 80%;
 }
 
 .interests{
@@ -47,6 +48,7 @@ p, li{
 .scroll-up{
   padding-top: 50px;
   height: 30%;
+  text-align: center;
 }
 
 .scroll-down{
@@ -129,7 +131,7 @@ p, li{
 }
 
 @media only screen and (max-width: 550px) {
-  .inner-square{
+  .inner-square, .about-me{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -154,6 +156,7 @@ p, li{
 
   .scroll-up{
     padding-top: 5px;
+    height: 10%;
   }
 
   .scroll-down{
@@ -178,7 +181,12 @@ p, li{
     align-self: center;
     justify-self: center;
   }
-
+  ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
   .interests{
     display: flex;
     flex-direction: column;

@@ -1,29 +1,27 @@
 <div class="mainpage" id="about-component">
   <div class="inner-square">
-    <div class="scroll scroll-up" (click)="scrollAbout('first-component')"><i class="fas fa-caret-up fa-lg arrow"></i>Go Back</div>
+    <div class="scroll scroll-up" (click)="scrollAbout('first-component')"><i class="fas fa-caret-up fa-lg arrow"></i>{{flag ? 'Vai indietro' : 'Go Back'}}</div>
     <div class="about-me">
-      <h1> About me</h1>
+      <h1>{{flag ? title_ita : title_eng}}</h1>
       <h3>
-        <span class="show-875">I am a developer who enjoys working <br>both in front-end and back-end development.</span>
-        <span class="hide-875">I am a developer who enjoys working both in front-end and back-end development, although during my short career I have worked less on the latter.</span>
+        <span class="show-875">{{flag ? show_875_ita : show_875_eng}}.</span>
+        <span class="hide-875">{{flag ? show_875_all_ita : show_875_all_eng}}</span>
       </h3>
-      <p class="hide-420">I am a person who learns more by working on projects rather than just studying the theoretical part.
-        I enjoy creating functional websites that have a simple and clean design.</p>
-      <p class="hide-875">Alongside my undergraduate computer science studies i learned HTML, CSS and Javascript on my own.
-        As time went by, i've made a couple of web sites and web app using React and React-Native, always self-taught.
-        After the bachelor's degree i learned how to develop websites using Angular, Spring and MySql together.</p>
-      <p class="hide-420">When i'm not coding I hang out with my friends and keep fit by cycling.</p>
+      <p class="hide-420">{{flag ? project_ita : project_eng}}</p>
+      <p class="hide-875">{{flag ? learn_ita : learn_eng}}</p>
+      <p class="hide-420">{{flag ? other_ita : other_eng}}</p>
     </div>
     <div class="interests">
-      <h2>Interests and likes</h2>
+      <h2>{{flag ? interest_ita : interest_eng}}</h2>
       <ul>
-        <li>Cycling</li>
-        <li class="hide-420">Watching Anime</li>
-        <li>Studying <span class="hide-420"> and learning stuff</span> </li>
-        <li>Reading</li>
-        <li>Cats and Spritz</li>
+        <ng-container *ngIf="!flag">
+          <li *ngFor="let hobby of hobby_eng; let i = index;" class="{{(i + 1) % 2 === 0 ? 'hide-420' : ''}}">{{hobby}}</li>
+        </ng-container>
+        <ng-container *ngIf="flag">
+          <li *ngFor="let hobby of hobby_ita; let i = index;" class="{{(i + 1) % 2 === 0 ? 'hide-420' : ''}}">{{hobby}}</li>
+        </ng-container>
       </ul>
     </div>
-    <div class="scroll scroll-down" (click)="scrollAbout('ed-ex-component')">Continue <i class="fas fa-caret-down fa-lg arrow"></i></div>
+    <div class="scroll scroll-down" (click)="scrollAbout('ed-ex-component')">{{flag ? 'Continua' : 'Continue'}}<i class="fas fa-caret-down fa-lg arrow"></i></div>
   </div>
 </div>

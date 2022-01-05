@@ -1,11 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
-$bg-primary: #582161;
-$bg-secondary: #E2BBE8;
-$bg-dark: #222;
+$bg-primary: #050C2B;
+$bg-secondary: #C11D31;
+$bg-dark: #050C2B;
 
 body{
   overflow: hidden;
-  font-family: 'Moul', cursive;
+  font-family: 'Signika Negative', sans-serif;
 }
 
 html {
@@ -49,6 +49,11 @@ html {
 .scroll:hover{
   transition: all .5s ease-in-out;
   transform: scale(1.1);
+}
+
+a{
+  text-decoration: none;
+  color: $bg-secondary;
 }
 
 @keyframes scroll-down-anim {

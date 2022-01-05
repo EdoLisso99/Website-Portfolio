@@ -1,3 +1,5 @@
+@import "src/styles";
+
 .inner-square{
   display: grid;
   grid-template-areas:
@@ -5,10 +7,6 @@
     "other other";
   grid-template-columns: 8fr 2fr;
   padding-top: 3.5em;
-}
-
-.show-500{
-  display: none;
 }
 
 .scroll{
@@ -59,16 +57,13 @@ button{
   .contact, .other, .form-group{
     width: 90%;
   }
-  .hide-500{
-    display: none;
-  }
-  .show-500{
-    display: flex;
-  }
   .icons{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+  }
+  .other h2{
+    text-align: center;
   }
 }
 
@@ -99,8 +94,9 @@ button{
 }
 
 @media only screen and (max-width: 300px) {
-  *:not(button){
-    padding: 0;
-    padding-left: 2vw;
+  .inner-square{
+    padding: 0 !important;
+    padding-left: 10vw !important;
+    padding-top: 10vh !important;
   }
 }

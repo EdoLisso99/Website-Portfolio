@@ -1,32 +1,33 @@
 <div class="mainpage" id="contacts-component">
   <div class="inner-square">
-    <div class="scroll scroll-up" (click)="scrollCont('first-component')"><i class="fas fa-caret-up fa-lg arrow"></i>Go Back Home</div>
+    <div class="scroll scroll-up" (click)="scrollCont('first-component')"><i class="fas fa-caret-up fa-lg arrow"></i>{{flag ? 'Torna alla home' : 'Go Back Home'}}</div>
     <div class="contact">
-      <h1>Contact</h1>
-      <form>
+      <h1>{{flag ? 'Contatti' : 'Contact'}}</h1>
+      <form (submit)="sendEmail($event)">
         <div class="form-group">
           <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Name">
+            <label for="name">{{flag ? 'Nome' : 'Name'}}</label>
+            <input type="text" class="form-control" id="name" placeholder="{{flag ? 'Nome' : 'Name'}}" [formControl]="name">
           </div>
-          <label for="email">Email address</label>
-          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          <label for="email">{{flag ? 'Indirizzo Email' : 'Email Address'}}</label>
+          <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                 placeholder="{{flag ? 'Inserisci l\'email' : 'Enter email'}}" [formControl]="email">
+          <small id="emailHelp" class="form-text text-muted">{{flag ? share_ita : share_eng}}</small>
         </div>
         <div class="form-group">
-          <label for="message">Message</label>
-          <textarea class="form-control" id="message" rows="2" placeholder="Please write a message here"></textarea>
+          <label for="message">{{flag ? 'Messaggio' : 'Message'}}</label>
+          <textarea class="form-control" id="message" rows="2" [formControl]="msg"
+                    placeholder="{{flag ? 'Scrivi qui il messaggio' : 'Please write a message here'}}"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Send</button>
+        <button type="submit" class="btn btn-danger">{{flag ? 'Invia' : 'Send'}}</button>
       </form>
     </div>
     <div class="other">
-      <h2>You can also find me there :</h2>
+      <h2>{{flag ? 'Mi puoi trovare anche qui :' : 'You can also find me there :'}}</h2>
       <div class="icons">
-        <i class="icon hide-500 fab fa-github fa-3x"></i><i class="icon hide-500 fab fa-linkedin fa-3x"></i>
-        <i class="icon hide-500 far fa-envelope fa-3x"></i> <i class="icon hide-500 fab fa-telegram-plane fa-3x"></i>
-        <i class="icon show-500 fab fa-github fa-lg"></i><i class="icon show-500 fab fa-linkedin fa-lg"></i>
-        <i class="icon show-500 far fa-envelope fa-lg"></i> <i class="icon show-500 fab fa-telegram-plane fa-lg"></i>
+        <a class="icon" href="https://github.com/EdoLisso99" target="_blank"><i class="hide-500 fab fa-github fa-3x"></i></a>
+        <a class="icon" href="https://www.linkedin.com/in/edoardo-lissoni-100997208/" target="_blank"><i class="hide-500 fab fa-linkedin fa-3x"></i></a>
+        <a class="icon" href="https://t.me/EdoLisso" target="_blank"><i class="hide-500 fab fa-telegram-plane fa-3x"></i></a>
       </div>
     </div>
   </div>

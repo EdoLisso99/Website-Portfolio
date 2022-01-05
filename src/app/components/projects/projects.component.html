@@ -1,38 +1,40 @@
 <div class="mainpage" id="projects-component">
   <div class="inner-square">
-    <div class="scroll scroll-up" (click)="scrollProj('ed-ex-component')"><i class="fas fa-caret-up fa-lg arrow"></i>Go Back</div>
+    <div class="scroll scroll-up" (click)="scrollProj('ed-ex-component')">
+      <i class="fas fa-caret-up fa-lg arrow"></i>{{flag ? 'Vai indietro' : 'Go Back'}}
+    </div>
     <div class="projects">
       <h1>Projects</h1>
       <ul>
         <li>
-          <i class="hide-600 fab fa-html5 fa-3x"></i><i class="hide-600 fab fa-css3-alt fa-3x"></i>
-          <i class="hide-600 fab fa-js-square fa-3x"></i><i class="hide-600 fab fa-angular fa-3x"></i>
-          <i class="hide-600 fab fa-node fa-3x"></i>
+          <i class="hide-550 fab fa-html5 fa-3x"></i><i class="hide-550 fab fa-css3-alt fa-3x"></i>
+          <i class="hide-550 fab fa-js-square fa-3x"></i><i class="hide-400 fab fa-angular fa-3x"></i>
+          <i class="hide-400 fab fa-node fa-3x"></i>
           <img alt="Spring Framework Logo" src="assets/icons/spring.png" height="40px">
           <img alt="MySQL Logo" src="assets/icons/mysql.png" height="40px">
-          <p>RentalCar</p><span class="date">- DEC 6, 2021</span>
+          <p>RentalCar</p><span class="date">- {{flag ? 'DICEMBRE' : 'DECEMBER'}} 6, 2021</span>
         </li>
         <li>
-          <i class="hide-600 fab fa-node fa-3x"></i><i class="hide-600 fab fa-react fa-3x"></i>
-          <p>Da-Peppo App</p><span class="date">- MARCH 4, 2021</span>
+          <i class="hide-400 fab fa-node fa-3x"></i><i class="hide-400 fab fa-react fa-3x"></i>
+          <p>Da-Peppo App</p><span class="date">- {{flag ? 'MARZO' : 'MARCH'}} 4, 2021</span>
         </li>
         <li>
-          <i class="hide-600 fab fa-node fa-3x"></i>
-          <p>Stock Analysis Project</p><span class="date">- JANUARY 12, 2021</span>
+          <i class="hide-400 fab fa-r-project fa-3x"></i>
+          <p>Stock Analysis Project</p><span class="date">- {{flag ? 'GENNAIO' : 'JANUARY'}} 12, 2021</span>
         </li>
         <li>
-          <i class="hide-600 fab fa-html5 fa-3x"></i><i class="hide-600 fab fa-css3-alt fa-3x"></i>
-          <i class="hide-600 fab fa-js-square fa-3x"></i><i class="hide-600 fab fa-node fa-3x"></i>
-          <i class="hide-600 fab fa-react fa-3x"></i>
-          <p>Quiz Game </p><span class="date">- DECEMBER 16, 2020</span>
+          <i class="hide-550 fab fa-html5 fa-3x"></i><i class="hide-550 fab fa-css3-alt fa-3x"></i>
+          <i class="hide-550 fab fa-js-square fa-3x"></i><i class="hide-400 fab fa-node fa-3x"></i>
+          <i class="hide-400 fab fa-react fa-3x"></i>
+          <p>Quiz Game </p><span class="date">- {{flag ? 'DICEMBRE' : 'DECEMBER'}} 16, 2020</span>
         </li>
         <li>
-          <i class="hide-600 fab fa-html5 fa-3x"></i><i class="hide-600 fab fa-css3-alt fa-3x"></i>
-          <i class="hide-600 fab fa-js-square fa-3x"></i><i class="hide-600 fab fa-node fa-3x"></i>
-          <p>Weather App</p><span class="date">- NOVEMBER 14, 2020</span>
+          <i class="hide-550 fab fa-html5 fa-3x"></i><i class="hide-550 fab fa-css3-alt fa-3x"></i>
+          <i class="hide-400 fab fa-js-square fa-3x"></i><i class="hide-400 fab fa-node fa-3x"></i>
+          <p>Weather App</p><span class="date">- {{flag ? 'NOVEMBRE' : 'NOVEMBER'}} 14, 2020</span>
         </li>
       </ul>
     </div>
-      <div class="scroll scroll-down" (click)="scrollProj('contacts-component')">Continue <i class="fas fa-caret-down fa-lg arrow"></i></div>
+      <div class="scroll scroll-down" (click)="scrollProj('contacts-component')">{{flag ? 'Continua' : 'Continue'}}<i class="fas fa-caret-down fa-lg arrow"></i></div>
   </div>
 </div>

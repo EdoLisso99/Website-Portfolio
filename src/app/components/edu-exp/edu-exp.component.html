@@ -1,35 +1,32 @@
 <div class="mainpage" id="ed-ex-component">
   <div class="inner-square">
-    <div class="scroll scroll-up" (click)="scrollEdEx('about-component')"><i class="fas fa-caret-up fa-lg arrow"></i>Go Back</div>
+    <div class="scroll scroll-up" (click)="scrollEdEx('about-component')"><i class="fas fa-caret-up fa-lg arrow"></i>{{flag ? 'Vai indietro' : 'Go Back'}}</div>
     <div class="education">
-      <h1>Education</h1>
+      <h1>{{flag ? 'Educazione' : 'Education'}}</h1>
       <div class="title">
-        <h2>Bachelor's degree in computer science</h2>
-        <p>University of Milan-Bicocca</p>
-        <p class="date">October 2018 - July 2021</p>
+        <h2>{{flag ? edu_title_1_ita : edu_title_1_eng}}</h2>
+        <p>{{flag ? edu_istitute_1_ita : edu_istitute_1_eng}}</p>
+        <p class="date">{{flag ? edu_date_1_ita : edu_date_1_eng}}</p>
       </div>
       <div class="title">
-        <h2>Electronic diploma</h2>
+        <h2>{{flag ? edu_title_2_ita : edu_title_2_eng}}</h2>
         <p>I.T.I.S. Ten. Vasc. A. Badoni</p>
-        <p class="date">September 2013 - July 2018</p>
+        <p class="date">{{flag ? edu_date_2_ita : edu_date_2_eng}}</p>
       </div>
     </div>
     <div class="experience">
-      <h1>Experience</h1>
+      <h1>{{flag ? 'Esperienza' : 'Experience'}}</h1>
       <div class="title">
-        <h2>Junior Full Stack Developer (Consultant)</h2>
+        <h2>{{flag ? exp_ita : exp_eng}} {{flag ? add_ita : add_eng}}</h2>
         <p>Accenture</p>
-        <p class="date">December 2021 - present</p>
+        <p class="date">{{flag ? 'Dicembre' : 'December'}} 2021 - present{{flag ? 'e' : ''}}</p>
       </div>
       <div class="title">
-        <h2>Junior Full Stack Developer</h2>
+        <h2>{{flag ? exp_ita : exp_eng}}</h2>
         <p>SI2001</p>
-        <p class="date">September 2021 - present</p>
+        <p class="date">{{flag ? 'Settembre' : 'September'}} 2021 - present{{flag ? 'e' : ''}}</p>
       </div>
     </div>
-<!--    <div class="cv">-->
-<!--      <p class="download">Download CV</p>-->
-<!--    </div>-->
-    <div class="scroll scroll-down" (click)="scrollEdEx('projects-component')">Continue <i class="fas fa-caret-down fa-lg arrow"></i></div>
+    <div class="scroll scroll-down" (click)="scrollEdEx('projects-component')">{{flag ? 'Continua' : 'Continue'}}<i class="fas fa-caret-down fa-lg arrow"></i></div>
   </div>
 </div>
