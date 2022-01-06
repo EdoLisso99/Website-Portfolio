@@ -3,20 +3,20 @@
     <div class="scroll scroll-up" (click)="scrollCont('first-component')"><i class="fas fa-caret-up fa-lg arrow"></i>{{flag ? 'Torna alla home' : 'Go Back Home'}}</div>
     <div class="contact">
       <h1>{{flag ? 'Contatti' : 'Contact'}}</h1>
-      <form (submit)="sendEmail($event)">
+      <form (submit)="sendEmail($event)" [formGroup]="formGroup">
         <div class="form-group">
           <div class="form-group">
             <label for="name">{{flag ? 'Nome' : 'Name'}}</label>
-            <input type="text" class="form-control" id="name" placeholder="{{flag ? 'Nome' : 'Name'}}" [formControl]="name">
+            <input type="text" class="form-control" id="name" placeholder="{{flag ? 'Nome' : 'Name'}}" formControlName="name">
           </div>
           <label for="email">{{flag ? 'Indirizzo Email' : 'Email Address'}}</label>
           <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
-                 placeholder="{{flag ? 'Inserisci l\'email' : 'Enter email'}}" [formControl]="email">
+                 placeholder="{{flag ? 'Inserisci l\'email' : 'Enter email'}}" formControlName="email">
           <small id="emailHelp" class="form-text text-muted">{{flag ? share_ita : share_eng}}</small>
         </div>
         <div class="form-group">
           <label for="message">{{flag ? 'Messaggio' : 'Message'}}</label>
-          <textarea class="form-control" id="message" rows="2" [formControl]="msg"
+          <textarea class="form-control" id="message" rows="2" formControlName="message"
                     placeholder="{{flag ? 'Scrivi qui il messaggio' : 'Please write a message here'}}"></textarea>
         </div>
         <button type="submit" class="btn btn-danger">{{flag ? 'Invia' : 'Send'}}</button>

@@ -5,12 +5,12 @@
       <h1>{{flag ? 'Educazione' : 'Education'}}</h1>
       <div class="title">
         <h2>{{flag ? edu_title_1_ita : edu_title_1_eng}}</h2>
-        <p>{{flag ? edu_istitute_1_ita : edu_istitute_1_eng}}</p>
+        <p>{{flag ? edu_istitute_1_ita : edu_istitute_1_eng}} {{flag ? '(MI)' : ''}}</p>
         <p class="date">{{flag ? edu_date_1_ita : edu_date_1_eng}}</p>
       </div>
       <div class="title">
         <h2>{{flag ? edu_title_2_ita : edu_title_2_eng}}</h2>
-        <p>I.T.I.S. Ten. Vasc. A. Badoni</p>
+        <p>I.T.I.S. Ten. Vasc. A. Badoni {{flag ? '(LC)' : ''}}</p>
         <p class="date">{{flag ? edu_date_2_ita : edu_date_2_eng}}</p>
       </div>
     </div>
