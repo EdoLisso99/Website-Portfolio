@@ -25,7 +25,9 @@ export class ProjectsComponent implements OnInit, OnChanges {
 
   showWIP() {
     alert(this.flag ?
-      "L'applicazione selezionata non è visualizzabile su GitHub! \nSto attualmente lavorando per creare una nuova sezione in cui si possono visualizzare tutti i progetti" :
-      "The chosen application cannot be shown on GitHub. \nI'm currently working for creating a new section in which i can display all the projects done!");
+      "L'applicazione selezionata non è visualizzabile (non per mia scelta).\nSto attualmente lavorando per creare una nuova sezione in cui si potranno visualizzare tutti i progetti" :
+      "The chosen application cannot be shown (not for my choice). \nI'm currently working for creating a new section in which i can display all the projects done!");
+
   }
+
 }
